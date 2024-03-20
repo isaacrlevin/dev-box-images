@@ -28,9 +28,9 @@
 
 # publisher: Contoso
 # offer: DevBox
-# replicaLocations:
-#   - eastus
-#   - westeurope
+replicaLocations:
+  - eastus
+  - westeurope
 # buildResourceGroup: Dev-Box-Custom-Images
 # keyVault: contosoimageskv
 # virtualNetwork: contoso-images-vnet
