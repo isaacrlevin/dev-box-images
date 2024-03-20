@@ -3,15 +3,15 @@
 
 # Details:
 # - https://docs.microsoft.com/en-us/visualstudio/install/use-command-line-parameters-to-install-visual-studio?view=vs-2022
-# - https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-enterprise?view=vs-2022
+# - https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-community?view=vs-2022
 
 $ProgressPreference = 'SilentlyContinue'	# hide any progress output
 
-$installerName = "vs_enterprise.exe"
+$installerName = "vs_community.exe"
 $installerPath = Join-Path -Path $env:TEMP -ChildPath $installerName
 
 Write-Host "[${env:username}] Downloading VS2022 ..."
-(new-object net.webclient).DownloadFile('https://aka.ms/vs/17/release/vs_enterprise.exe', $installerPath)
+(new-object net.webclient).DownloadFile('https://aka.ms/vs/17/release/vs_community.exe', $installerPath)
 
 Write-Host "[${env:username}] Installing VS2022 ..."
 $process = Start-Process -FilePath $installerPath -ArgumentList `
